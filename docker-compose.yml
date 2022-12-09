@@ -1,0 +1,15 @@
+version: '2'
+services:
+    message-server:
+        container_name: hello-world
+        build:
+            context: helloworld_api
+            dockerfile: Dockerfile
+        image: helloworld_api:latest
+        ports:
+            - 8080:8080
+        networks:
+            - spring-cloud-network
+networks:
+    spring-cloud-network:
+        driver: bridge
