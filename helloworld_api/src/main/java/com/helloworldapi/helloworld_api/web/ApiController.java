@@ -16,7 +16,7 @@ public class ApiController{
 
     ApiServiceImpl apiService;
 
-    @GetMapping("/hi")
+    @GetMapping("/")
     public  ResponseEntity<String> helloWorld(){
         return new ResponseEntity<>("Hello World", HttpStatus.OK);
     }
